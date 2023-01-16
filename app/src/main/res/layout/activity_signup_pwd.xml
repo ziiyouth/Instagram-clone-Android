@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup.SignupPwdActivity">
+
+    <TextView
+        android:id="@+id/signup_pwd_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 만들기"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signup_pwd_des_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="보안을 위해 비밀번호는 6자 이상이어야 합니다."
+        android:textSize="14dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_pwd_tv"/>
+
+    <EditText
+        android:id="@+id/signup_pwd_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:background="@drawable/login_round_gray"
+        android:hint="비밀번호"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="25dp"
+        android:maxLines="1"
+        android:padding="16dp"
+        android:selectAllOnFocus="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_pwd_des_tv"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_pwd_next_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:text="다음"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_round_blue"
+        app:layout_constraintEnd_toEndOf="@+id/signup_pwd_et"
+        app:layout_constraintStart_toStartOf="@+id/signup_pwd_et"
+        app:layout_constraintTop_toBottomOf="@+id/signup_pwd_et"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

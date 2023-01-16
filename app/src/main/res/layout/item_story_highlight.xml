@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/item_story_hl_bt"
+        android:layout_width="85dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_story_hl_plus"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintStart_toStartOf="@+id/item_story_hl_bt"
+        app:layout_constraintEnd_toEndOf="@+id/item_story_hl_bt"
+        app:layout_constraintTop_toTopOf="@+id/item_story_hl_bt"
+        app:layout_constraintBottom_toBottomOf="@+id/item_story_hl_bt"/>
+
+    <TextView
+        android:id="@+id/item_story_hl_tv"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="@+id/item_story_hl_bt"
+        app:layout_constraintEnd_toEndOf="@+id/item_story_hl_bt"
+        app:layout_constraintTop_toBottomOf="@+id/item_story_hl_bt"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

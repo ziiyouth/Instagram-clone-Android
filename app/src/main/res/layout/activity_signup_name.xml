@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup.SignupNameActivity">
+
+    <TextView
+        android:id="@+id/signup_nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름 추가"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signup_name_des_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="친구들이 회원님을 찾을 수 있도록 이름을 추가하세요"
+        android:textSize="14dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_nickname_tv"/>
+
+    <EditText
+        android:id="@+id/signup_nickname_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:background="@drawable/login_round_gray"
+        android:hint="이름"
+        android:layout_marginTop="25dp"
+        android:maxLines="1"
+        android:padding="16dp"
+        android:selectAllOnFocus="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_name_des_tv"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signup_nickname_next_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:text="다음"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_round_blue"
+        app:layout_constraintEnd_toEndOf="@+id/signup_nickname_et"
+        app:layout_constraintStart_toStartOf="@+id/signup_nickname_et"
+        app:layout_constraintTop_toBottomOf="@+id/signup_nickname_et"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

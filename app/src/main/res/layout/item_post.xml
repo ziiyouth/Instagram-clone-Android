@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_post_up_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/item_post_story"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/ic_story_border"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+             />
+
+        <ImageView
+            android:id="@+id/item_post_profile"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:src="@drawable/ic_profile_default"
+            app:layout_constraintStart_toStartOf="@id/item_post_story"
+            app:layout_constraintEnd_toEndOf="@id/item_post_story"
+            app:layout_constraintTop_toTopOf="@id/item_post_story"
+            app:layout_constraintBottom_toBottomOf="@id/item_post_story"/>
+
+        <TextView
+            android:id="@+id/item_post_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="zyoxng"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_post_story" />
+
+        <ImageView
+            android:id="@+id/item_post_option"
+            android:layout_width="3dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_post_more_option"
+            android:layout_marginRight="15dp"
+            app:layout_constraintTop_toTopOf="@id/item_post_story"
+            app:layout_constraintBottom_toBottomOf="@id/item_post_story"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/item_post_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_post_1"
+        app:layout_constraintBottom_toTopOf="@id/item_post_bottom_bar"
+        app:layout_constraintTop_toBottomOf="@id/item_post_up_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_post_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintTop_toBottomOf="@id/item_post_img"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/item_post_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_heart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/item_post_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:background="@drawable/ic_comment"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_post_heart"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/item_post_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:background="@drawable/ic_share"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_post_comment"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/item_post_bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_bookmark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/item_post_likenum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="좋아요 193개"
+        android:layout_marginLeft="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_post_bottom_bar"
+         />
+
+    <TextView
+        android:id="@+id/item_post_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="zyoxng 엉엉엉엉엉엉엉엉엉엉엉 흐앙흐앙흐앙흐앙흐앙흐앙 흐앙 몽몽몽몽몽몽 아자아자 화이팅"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:maxLines="2"
+        android:textSize="14dp"
+        android:bufferType="spannable"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/item_post_likenum"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/item_post_comment_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="댓글 54개 모두 보기"
+        android:textSize="14dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_post_content" />
+
+    <TextView
+        android:id="@+id/item_post_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4시간 전"
+        android:textSize="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="3dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_post_comment_num" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
